@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <style >
+
+
+         .section_1{
+            background-color: rgb(17, 17, 17,0.5);
+            color: beige;
+            display:block;
+            margin-top: 10%;
+            float:left;
+            width:45%;
+            height:70%;
+            margin-right:5%;
+            margin-left:5%;
+            border-radius: 0.2rem;
+            
+         }
+        .section_1 p{
+            padding-top: 2rem;
+            text-align: center;
+        }
+        .section_1 h2{
+           text-align: center;
+        }
+
+         .section_2{
+            display:inline-block;
+            margin-top: 10%;
+            width:40%;
+            height:70%;
+            border-radius: 0.2rem;
+            
+
+         }
+         .section_2 img{
+            height:100%;
+            width:100%;
+            object-fit:cover;
+            opacity: 0.8;
+         }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book haven</h1>
+        <nav>
+            <ul>
+
+                <li onclick="goToPage(1)">Home</li>
+                
+                <li onclick="goToPage(2)">Geres</li>
+                <li onclick="goToPage(3)">My Cart</li>
+                <li onclick="goToPage(4)">About</li>
+            </ul>
+        </nav>
+    </header>
+    <section class = "section_1">
+        <h2>Rent and buy Your Favorite Books Easily</h2>
+        <p>Find your next favorite book with ease. 
+            Buy or rent from our huge collection of genres, and enjoy flexible, affordable options. Start exploring today and bring more reading into your life!</p>
+       
+    </section>
+    <section class = "section_2">
+   <img src="book_taplet.jpg" alt="book and tablet">
+    </section>
+      <footer>
+    <p>&copy; 2025 Book Haven. All rights reserved.</p>
+  </footer>
+
+</body>
+<script>function goToPage(Number){
+    window.location.href = "page" + Number + ".html"
+}
+</script>
+</html>
