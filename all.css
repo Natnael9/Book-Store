@@ -16,6 +16,9 @@
            position: fixed ;
            top:0;
            left:0;
+           z-index:1000;
+           display: flex;
+           justify-content: space-between;
            
         }
         
@@ -24,17 +27,16 @@
             display:inline-block;
             float: left;
             font-size: 1.4rem;
-            margin-right: 20%;
-            margin-left: 5%;
+            margin-left: 40px;
             height:100%;
             align-content: center;
-            filter: 8%;
-            
-            
         }
         
         nav ul{
+
             list-style-type: none;
+            height: 100%;
+            width:400px;
             
         }
         nav ul li{
@@ -43,14 +45,17 @@
             padding:0 0.75vw 0 0.75vw;
             height: 100%;
             align-content: center;
+            cursor: pointer;
         }
          nav ul li:hover{
             background-color:rgba(37, 35, 35,0.8);
          }
-
+        header input{
+          margin-right: 10px;
+        }
          .title {
       text-align: center;
-      margin-top:10%;
+      margin-top:5%;
       
     }
 
@@ -80,6 +85,9 @@
       text-align: center;
       background-color:rgba(94, 67, 28, 0.6);
     }
+    .book:hover {
+      transform: scale(1.12);
+    }
     .book img {
       display: block;
       width: 100%; 
@@ -97,5 +105,59 @@
       font-size: 14px;
       color: white;
     }
-          
-         
+ 
+ .rent {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.rent, .buy :not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.rent, .buy :not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+/* buy button */
+ .buy {
+  background: linear-gradient(to bottom right, #257e13, #76ff5a);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+/*##########################################*/
+    
