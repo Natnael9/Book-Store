@@ -1,30 +1,32 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Document</title>
-    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="all.css" />
 </head>
 <body>
     <header>
         <h1>Book Haven</h1>
         <nav>
             <ul>
-                <li onclick="goToPage(1)">Home</li>
-                <li id="genres" onclick="goToPage(2)">
+                <li onclick="goToHome_Page()">Home</li>
+                <li id="genres">
                     Genres
                     <ul class="genra_dropdown">
-                        <li>Fiction</li>
-                        <li>Action</li>
-                        <li>History</li>
+                        <li onclick="goToPage(1)">Fiction</li>
+                        <li onclick="goToPage(2)">History</li>
+                        <li onclick="goToPage(3)">Action</li>
+                        <li onclick="goToPage(4)">Comics</li>
+                        <li onclick="goToPage(5)">Self Help</li>
                     </ul>
                 </li>
-                <li onclick="goToPage(3)">My Cart</li>
-                <li onclick="goToPage(4)">About</li>
+                <li>My Cart</li>
+                <li>About</li>
             </ul>
         </nav>
         <div class="search-box">
-            <input type="text" placeholder="Enter book title...">
+            <input type="text" placeholder="Enter book title..." />
             <button>Search</button>
         </div>
     </header>
@@ -36,40 +38,66 @@
 
     <section class="book-list">
         <div class="book">
-            <img src="images/harry potter.png" alt="Fiction book cover placeholder 1">
-            <h4>Harry Potter and the Sorcerer’s Stone – J.K. Rowling 1</h4>
-            <p>A boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
-            <button class="buy">Buy</button>
-            <button class="rent">Rent</button>
+            <img src="images/fiction/harry potter.png" alt="Harry Potter book cover" />
+            <h4>Harry Potter and the Sorcerer’s Stone – J.K. Rowling</h4>
+            <p>A young boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
+            <button class="buy" onclick="handleBuy('Harry Potter and the Sorcerer’s Stone', 'images/fiction/harry potter.png', 20)">Buy</button>
+            <button class="rent" onclick="handleRent('Harry Potter and the Sorcerer’s Stone', 'images/fiction/harry_potter.png', 6)">Rent</button>
         </div>
 
         <div class="book">
-            <img src="images/mockingbird.png" alt="Fiction book cover placeholder 2">
+            <img src="images/fiction/mockingbird.png" alt="To Kill a Mockingbird book cover" />
             <h4>To Kill a Mockingbird – Harper Lee</h4>
             <p>A young girl witnesses racial injustice in the Deep South as her father defends an innocent man.</p>
-            <button class="buy">Buy</button>
-            <button class="rent">Rent</button>
+            <button class="buy" onclick="handleBuy('To Kill a Mockingbird', 'images/fiction/mockingbird.png', 18)">Buy</button>
+            <button class="rent" onclick="handleRent('To Kill a Mockingbird', 'images/fiction/mockingbird.png', 5)">Rent</button>
         </div>
 
         <div class="book">
-            <img src="images/thebookthief.png" alt="Fiction book cover placeholder 3">
-            <h4>Harry Potter and the Sorcerer’s Stone – J.K. Rowling</h4>
-            <p>A boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
-            <button class="buy">Buy</button>
-            <button class="rent">Rent</button>
+            <img src="images/fiction/thebookthief.png" alt="The Book Thief book cover" />
+            <h4>The Book Thief – Markus Zusak</h4>
+            <p>A story about a girl who finds solace in stealing books during Nazi Germany.</p>
+            <button class="buy" onclick="handleBuy('The Book Thief', 'images/fiction/thebookthief.png', 19)">Buy</button>
+            <button class="rent" onclick="handleRent('The Book Thief', 'images/fiction/thebookthief.png', 6)">Rent</button>
         </div>
 
         <div class="book">
-            <img src="images/thekiterunner.png" alt="Fiction book cover placeholder 4">
+            <img src="images/fiction/thekiterunner.png" alt="The Kite Runner book cover" />
             <h4>The Kite Runner – Khaled Hosseini</h4>
             <p>A man returns to Afghanistan to make amends for childhood betrayal and loss.</p>
-            <button class="buy">Buy</button>
-            <button class="rent">Rent</button>
+            <button class="buy" onclick="handleBuy('The Kite Runner', 'images/fiction/thekiterunner.png', 17)">Buy</button>
+            <button class="rent" onclick="handleRent('The Kite Runner', 'images/fiction/thekiterunner.png', 5)">Rent</button>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Book Haven. All rights reserved.</p>
-    </footer>   
+    </footer>
+
+    <script>
+        function goToPage(Number){
+            window.location.href = "page_" + Number + ".html"
+        }
+
+        function goToHome_Page(){
+            window.location.href = "index1.html"
+        }
+
+        function handleBuy(title, image, price){
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "buy");
+            window.location.href = "buy.html";
+        }
+
+        function handleRent(title, image, price){
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "rent");
+            window.location.href = "rent.html";
+        }
+    </script> 
 </body>
 </html>

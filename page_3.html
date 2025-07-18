@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <ul>
+                <li onclick="goToHome_Page()">Home</li>
+                <li id="genres">
+                    Genres
+                    <ul class="genra_dropdown">
+                        <li onclick="goToPage(1)">Fiction</li>
+                        <li onclick="goToPage(2)">History</li>
+                        <li onclick="goToPage(3)">Action</li>
+                        <li onclick="goToPage(4)">comics</li>
+                        <li onclick="goToPage(5)">Self Help</li>
+                    </ul>
+                </li>
+                <li>My Cart</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter book title...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <section class="title">
+        <h2>Action Books</h2>
+        <p>Every page is a heartbeat.</p>
+    </section>
+
+    <section class="book-list">
+        <div class="book">
+            <img src="images/action/Jack_Reacher.png" alt="Fiction book cover placeholder 1">
+            <h4>Jack Reacher: Killing Floor – Lee Child</h4>
+            <p>Action-packed thriller starring a former military cop.</p>
+            <button class="buy" onclick="handleBuy('Jack Reacher: Killing Floor', 'images/action/Jack_Reacher.png', 17)">Buy</button>
+            <button class="rent" onclick="handleRent('Jack Reacher: Killing Floor', 'images/action/Jack_Reacher.png', 5)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/action/the_borne.png" alt="Fiction book cover placeholder 2">
+            <h4>The Bourne Identity – Robert Ludlum </h4>
+            <p>A spy action novel with amnesia, identity, and pursuit.</p>
+            <button class="buy" onclick="handleBuy('The Bourne Identity', 'images/action/the_borne.png', 18)">Buy</button>
+            <button class="rent" onclick="handleRent('The Bourne Identity', 'images/action/the_borne.png', 6)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/action/red.png" alt="Fiction book cover placeholder 3">
+            <h4>Red Rising – Pierce Brown</h4>
+            <p>A brutal and thrilling tale of rebellion in a futuristic society set on Mars.</p>
+            <button class="buy" onclick="handleBuy('Red Rising', 'images/action/red.png', 16)">Buy</button>
+            <button class="rent" onclick="handleRent('Red Rising', 'images/action/red.png', 5)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/action/maze_runner.png" alt="Fiction book cover placeholder 4">
+            <h4>The Maze Runner – James Dashner</h4>
+            <p>A gripping dystopian survival story where teens must escape a deadly maze.</p>
+            <button class="buy" onclick="handleBuy('The Maze Runner', 'images/action/maze_runner.png', 15)">Buy</button>
+            <button class="rent" onclick="handleRent('The Maze Runner', 'images/action/maze_runner.png', 4)">Rent</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Book Haven. All rights reserved.</p>
+    </footer>  
+    ocalStorage.setItem("bookTitle", title);
+            l<script>
+        function goToPage(Number){
+            window.location.href = "page_" + Number + ".html"
+        }
+        function goToHome_Page(){
+            window.location.href = "index1.html"
+        }
+        function handleBuy(title, image, price){
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "buy");
+            window.location.href = "buy.html";
+        }
+        function handleRent(title, image, price){
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "rent");
+            window.location.href = "rent.html";
+        }
+    </script> 
+</body>
+</html>

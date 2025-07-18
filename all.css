@@ -58,35 +58,29 @@
     .genra_dropdown{
       position:absolute;
       z-index:1000;
-      width: auto;
+      
       height: auto;
+      width: 90px;
       top: 60px;
       left: 495px;
       list-style-type: none;
       background-color:rgba(37, 35, 35,0.8);
       color:white;
+      padding: 0;
       display: none;
-      
-     
+   
     }
     .genra_dropdown li{
-      display: inline-block;
-      float:left;
-      width: 50px;
       padding-top:5px;
       padding-bottom:5px;
-      width: 90px;
-      
-      
+ 
     }
     .genra_dropdown li:hover{
       background-color:rgba(0, 0, 0, 0.6);
-
-
-       
     }
    #genres:hover .genra_dropdown{
     display: block;
+  
     
    }
 
@@ -98,10 +92,6 @@
       align-items: center;
       max-width: 500px;
       display:flex;
-      
-      
-
-      
     }
 
     .search-box input[type="text"] {
@@ -138,9 +128,6 @@
       margin-top:5%;
       
     }
-
-
-
 
           footer {
             user-select: none;    
@@ -210,15 +197,6 @@
   touch-action: manipulation;
   white-space: nowrap;
 }
-
-.rent, .buy :not([disabled]):focus {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-.rent, .buy :not([disabled]):hover {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
 /* buy button */
  .buy {
   background: linear-gradient(to bottom right, #257e13, #76ff5a);

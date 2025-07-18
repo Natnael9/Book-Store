@@ -1,0 +1,101 @@
+
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <ul>
+                <li onclick="goToHome_Page()">Home</li>
+                <li id="genres">
+                    Genres
+                    <ul class="genra_dropdown">
+                        <li onclick="goToPage(1)">Fiction</li>
+                        <li onclick="goToPage(2)">History</li>
+                        <li onclick="goToPage(3)">Action</li>
+                        <li onclick="goToPage(4)">comics</li>
+                        <li onclick="goToPage(5)">Self Help</li>
+                    </ul>
+                </li>
+                <li>My Cart</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter book title...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <section class="title">
+        <h2>Comics Books</h2>
+        <p>Bold stories, vivid frames, endless fun.</p>
+    </section>
+
+    <section class="book-list">
+        <div class="book">
+            <img src="images/comics/Maus.png" alt="Fiction book cover placeholder 1">
+            <h4>Maus – Art Spiegelman</h4>
+            <p>A graphic novel that tells the Holocaust story through anthropomorphic animals.</p>
+            <button class="buy" onclick="handleBuy('Maus – Art Spiegelman', 'images/comics/Maus.png', 14)">Buy</button>
+            <button class="rent" onclick="handleRent('Maus – Art Spiegelman', 'images/comics/Maus.png', 4)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/comics/Watchmen.png" alt="Fiction book cover placeholder 2">
+            <h4>Watchmen – Alan Moore & Dave Gibbons </h4>
+            <p>A gritty, realistic superhero comic.</p>
+            <button class="buy" onclick="handleBuy('Watchmen – Alan Moore & Dave Gibbons', 'images/comics/Watchmen.png', 16)">Buy</button>
+            <button class="rent" onclick="handleRent('Watchmen – Alan Moore & Dave Gibbons', 'images/comics/Watchmen.png', 5)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/comics/batman.png" alt="Fiction book cover placeholder 3">
+            <h4>Batman: The Killing Joke – Alan Moore </h4>
+            <p>A dark take on the Batman-Joker dynamic.</p>
+            <button class="buy" onclick="handleBuy('Batman: The Killing Joke – Alan Moore', 'images/comics/batman.png', 12)">Buy</button>
+            <button class="rent" onclick="handleRent('Batman: The Killing Joke – Alan Moore', 'images/comics/batman.png', 3)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/comics/saga.png" alt="Fiction book cover placeholder 4">
+            <h4>Saga – Brian K. Vaughan & Fiona Staples</h4>
+            <p>A space opera blending sci-fi, fantasy, and family drama.</p>
+            <button class="buy" onclick="handleBuy('Saga – Brian K. Vaughan & Fiona Staples', 'images/comics/saga.png', 18)">Buy</button>
+            <button class="rent" onclick="handleRent('Saga – Brian K. Vaughan & Fiona Staples', 'images/comics/saga.png', 4)">Rent</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Book Haven. All rights reserved.</p>
+    </footer>  
+    <script>
+        function goToPage(Number){
+            window.location.href = "page_" + Number + ".html"
+        }
+        function goToHome_Page(){
+            window.location.href = "index1.html"
+        }
+        function handleBuy(title, image, price){
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "buy");
+            window.location.href = "buy.html";
+        }
+        function handleRent(title, image, price){
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "rent");
+            window.location.href = "rent.html";
+        }
+    </script> 
+</body>
+</html>
+

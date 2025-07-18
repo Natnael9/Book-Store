@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <ul>
+                <li onclick="goToHome_Page()">Home</li>
+                <li id="genres">
+                    Genres
+                    <ul class="genra_dropdown">
+                        <li onclick="goToPage(1)">Fiction</li>
+                        <li onclick="goToPage(2)">History</li>
+                        <li onclick="goToPage(3)">Action</li>
+                        <li onclick="goToPage(4)">comics</li>
+                        <li onclick="goToPage(5)">Self Help</li>
+                    </ul>
+                </li>
+                <li >My Cart</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter book title...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <section class="title">
+        <h2>History Books</h2>
+        <p>Discover the roots that shaped our world.</p>
+    </section>
+
+    <section class="book-list">
+        <div class="book">
+            <img src="images/history/wax.png" alt="Fiction book cover placeholder 1">
+            <h4>Wax and Gold: Tradition and Innovation in Ethiopian Culture – Donald N.</h4>
+            <p>A deep sociological and historical look into Ethiopian traditions, identity, and modernization.</p>
+            <button class="buy" onclick="handleBuy('Wax and Gold', 'images/history/wax.png', 18)">Buy</button>
+            <button class="rent" onclick="handleRent('Wax and Gold', 'images/history/wax.png', 5)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/history/diary.png" alt="Fiction book cover placeholder 2">
+            <h4>The Diary of a Young Girl – Anne Frank </h4>
+            <p>A firsthand account of a Jewish girl hiding during WWII.</p>
+            <button class="buy" onclick="handleBuy('The Diary of a Young Girl', 'images/history/diary.png', 16)">Buy</button>
+            <button class="rent" onclick="handleRent('The Diary of a Young Girl', 'images/history/diary.png', 4)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/history/history_of_ethiopia.png" alt="Fiction book cover placeholder 3">
+            <h4>The Ethiopians: A History – Richard Pankhurs</h4>
+            <p>A boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
+            <button class="buy" onclick="handleBuy('The Ethiopians: A History', 'images/history/history_of_ethiopia.png', 20)">Buy</button>
+            <button class="rent" onclick="handleRent('The Ethiopians: A History', 'images/history/history_of_ethiopia.png', 6)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/history/guns.png" alt="Fiction book cover placeholder 4">
+            <h4>The Kite Runner – Khaled Hosseini</h4>
+            <p>A man returns to Afghanistan to make amends for childhood betrayal and loss.</p>
+            <button class="buy" onclick="handleBuy('The Kite Runner', 'images/history/guns.png', 19)">Buy</button>
+            <button class="rent" onclick="handleRent('The Kite Runner', 'images/history/guns.png', 5)">Rent</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Book Haven. All rights reserved.</p>
+    </footer>  
+    <script>
+        function goToPage(Number){
+            window.location.href = "page_" + Number + ".html"
+        }
+
+        function goToHome_Page(){
+            window.location.href = "index1.html"
+        }
+
+        function handleBuy(title, image, price){
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "buy");
+            window.location.href = "buy.html";
+        }
+
+        function handleRent(title, image, price){
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", image);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "rent");
+            window.location.href = "rent.html";
+        }
+    </script> 
+</body>
+</html>

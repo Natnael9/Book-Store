@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <ul>
+
+                <li onclick="goToHome_Page()">Home</li>
+                <li id="genres">
+                    Genres
+                    <ul class="genra_dropdown">
+                        <li onclick="goToPage(1)">Fiction</li>
+                        <li onclick="goToPage(2)">History</li>
+                        <li onclick="goToPage(3)">Action</li>
+                        <li onclick="goToPage(4)">comics</li>
+                        <li onclick="goToPage(5)">Self Help</li>
+                    </ul>
+                </li>
+                <li >My Cart</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter book title...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <section class="title">
+        <h2>Self-Help</h2>
+        <p>Transform your mindset, change your life.</p>
+    </section>
+
+    <section class="book-list">
+        <div class="book">
+            <img src="images/self-help/Atomic_habits.png" alt="Fiction book cover placeholder 1">
+            <h4>Atomic Habits – ames Clear</h4>
+            <p>Focuses on how small habits lead to big changes.</p>
+            <button class="buy" onclick="handleBuy('Atomic Habits', 'images/self-help/Atomic_habits.png', 20)">Buy</button>
+            <button class="rent" onclick="handleRent('Atomic Habits', 'images/self-help/Atomic_habits.png', 5)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/self-help/7habits.png" alt="Fiction book cover placeholder 2">
+            <h4>The 7 Habits of Highly Effective People – Stephen R. Covey</h4>
+            <p>Timeless advice on personal and professional effectiveness.</p>
+            <button class="buy" onclick="handleBuy('The 7 Habits of Highly Effective People', 'images/self-help/7habits.png', 18)">Buy</button>
+            <button class="rent" onclick="handleRent('The 7 Habits of Highly Effective People', 'images/self-help/7habits.png', 6)">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/self-help/think_and_growrich.png" alt="Fiction book cover placeholder 3">
+            <h4>Think and Grow Rich – Napoleon Hill </h4>
+            <p>A mindset guide to achieving success and wealth.</p>
+            <button class="buy" onclick="handleBuy('Think and Grow Rich', 'images/self-help/think_and_growrich.png', 15)">Buy</button>
+            <button class="rent" onclick="handleRent('Think and Grow Rich', 'images/self-help/think_and_growrich.png', 4)">Rent</button>
+
+        </div>
+
+        <div class="book">
+            <img src="images/self-help/the_powerof_now.png" alt="Fiction book cover placeholder 4">
+            <h4>The Power of Now – Eckhart Tolle</h4>
+            <p>A spiritual guide to mindfulness and living in the moment.</p>
+            <button class="buy" onclick="handleBuy('The Power of Now', 'images/self-help/the_powerof_now.png', 22)">Buy</button>
+            <button class="rent" onclick="handleRent('The Power of Now', 'images/self-help/the_powerof_now.png', 5)">Rent</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Book Haven. All rights reserved.</p>
+    </footer>  
+    <script>function goToPage(Number){
+    window.location.href = "page_" + Number + ".html"
+    }
+    function goToHome_Page(){
+    window.location.href = "index1.html"
+    }
+            function goToPage(Number) {
+            window.location.href = "page_" + Number + ".html";
+        }
+
+        function goToHome_Page() {
+            window.location.href = "index1.html";
+        }
+
+        function handleBuy(title, imgSrc, price) {
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", imgSrc);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "buy");
+            window.location.href = "buy.html";
+        }
+
+        function handleRent(title, imgSrc, price) {
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("bookImage", imgSrc);
+            localStorage.setItem("bookPrice", price);
+            localStorage.setItem("mode", "rent");
+            window.location.href = "rent.html";
+        }
+    </script> 
+</body>
+</html>

@@ -18,6 +18,7 @@
             margin-right:5%;
             margin-left:5%;
             border-radius: 8px;
+            align-content: center;
             
          }
         .section_1 p{
@@ -53,17 +54,19 @@
         <nav>
             <ul>
 
-                <li onclick="goToPage(1)">Home</li>
-                <li id="genres" onclick="goToPage(2)">
+                <li onclick="goToHome_Page()">Home</li>
+                <li id="genres">
                     Genres
                     <ul class="genra_dropdown">
-                        <li>Fiction</li>
-                        <li>Action</li>
-                        <li>History</li>
+                        <li onclick="goToPage(1)">Fiction</li>
+                        <li onclick="goToPage(2)">History</li>
+                        <li onclick="goToPage(3)">Action</li>
+                        <li onclick="goToPage(4)">comics</li>
+                        <li onclick="goToPage(5)">Self Help</li>
                     </ul>
                 </li>
-                <li onclick="goToPage(3)">My Cart</li>
-                <li onclick="goToPage(4)">About</li>
+                <li >My Cart</li>
+                <li>About</li>
             </ul>
         </nav>
        
@@ -83,7 +86,10 @@
 
 </body>
 <script>function goToPage(Number){
-    window.location.href = "page" + Number + ".html"
+    window.location.href = "page_" + Number + ".html"
+    }
+    function goToHome_Page(){
+    window.location.href = "index1.html"
 }
-</script>
+    </script> 
 </html>

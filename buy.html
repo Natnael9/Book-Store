@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Purchase</title>
+    <link rel="stylesheet" href="all.css">
+    <style>
+        .container {
+            text-align: center;
+            padding: 30px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h2, p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="book-title">Loading...</h2>
+        <img id="book-image" src="" alt="Book Image">
+        <p id="book-price">Price: $0.00</p>
+        <button onclick="window.history.back()">Go Back</button>
+    </div>
+
+    <script>
+        const title = localStorage.getItem("bookTitle");
+        const image = localStorage.getItem("bookImage");
+        const price = localStorage.getItem("bookPrice");
+        const mode = localStorage.getItem("mode");
+
+        document.getElementById("book-title").textContent = title;
+        document.getElementById("book-image").src = image;
+        document.getElementById("book-price").textContent = (mode === "buy" ? "Buy" : "Rent") + " Price: $" + price;
+    </script>
+</body>
+</html>
