@@ -18,8 +18,8 @@
            left:0;
            z-index:1000;
            display: flex;
-           justify-content: space-between;
-           
+           align-content: center;
+           gap: 240px;
         }
         
         header h1{
@@ -42,8 +42,9 @@
         nav ul li{
             color:white;
             display:inline-block;
-            padding:0 0.75vw 0 0.75vw;
+            padding:0 15px 0 15px;
             height: 100%;
+            margin: 0 10px 0 10px;
             align-content: center;
             cursor: pointer;
         }
@@ -53,11 +54,93 @@
         header input{
           margin-right: 10px;
         }
-         .title {
+         
+    .genra_dropdown{
+      position:absolute;
+      z-index:1000;
+      width: auto;
+      height: auto;
+      top: 60px;
+      left: 495px;
+      list-style-type: none;
+      background-color:rgba(37, 35, 35,0.8);
+      color:white;
+      display: none;
+      
+     
+    }
+    .genra_dropdown li{
+      display: inline-block;
+      float:left;
+      width: 50px;
+      padding-top:5px;
+      padding-bottom:5px;
+      width: 90px;
+      
+      
+    }
+    .genra_dropdown li:hover{
+      background-color:rgba(0, 0, 0, 0.6);
+
+
+       
+    }
+   #genres:hover .genra_dropdown{
+    display: block;
+    
+   }
+
+    /*################################*/
+    .search-box {
+      
+      margin-top: 3px;
+      justify-content: center;
+      align-items: center;
+      max-width: 500px;
+      display:flex;
+      
+      
+
+      
+    }
+
+    .search-box input[type="text"] {
+      flex: 1;
+      padding: 10px 15px;
+      border: 2px solid #f0eaea;
+      border-right: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      font-size: 16px;
+      margin-right: 0%;
+    }
+
+    .search-box button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: 2px solid #333;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin-left: 0%;
+    }
+
+    .search-box button:hover {
+      background-color: #555;
+    }
+    /*###################################################*/
+
+    .title {
       text-align: center;
       margin-top:5%;
       
     }
+
+
+
 
           footer {
             user-select: none;    
@@ -154,7 +237,6 @@
   text-decoration: none;
   transition: box-shadow .2s ease-in-out;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
 }

@@ -7,55 +7,69 @@
 </head>
 <body>
     <header>
-        <h1>Book haven</h1>
+        <h1>Book Haven</h1>
         <nav>
             <ul>
-
                 <li onclick="goToPage(1)">Home</li>
-                <li onclick="goToPage(2)">Geres</li>
+                <li id="genres" onclick="goToPage(2)">
+                    Genres
+                    <ul class="genra_dropdown">
+                        <li>Fiction</li>
+                        <li>Action</li>
+                        <li>History</li>
+                    </ul>
+                </li>
                 <li onclick="goToPage(3)">My Cart</li>
                 <li onclick="goToPage(4)">About</li>
             </ul>
         </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter book title...">
+            <button>Search</button>
+        </div>
     </header>
+
     <section class="title">
-      <h2>Fiction Books</h2>
-      <p>Dive into stories beyond imagination</p>
+        <h2>Fiction Books</h2>
+        <p>Dive into stories beyond imagination</p>
     </section>
+
     <section class="book-list">
-    <div class="book">
-      <img src="images/harry potter.png" alt="Fiction book cover placeholder 1">
-      <h4>Harry Potter and the Sorcerer’s Stone – J.K. Rowling 1</h4>
-      <p>A boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
-      <button class="buy">Buy</button>
-      <button class = "rent">Rent</button>
-    </div>
-    <div class="book">
-      <img src="images/mockingbird.png" alt="Fiction book cover placeholder 2">
-      <h4>To Kill a Mockingbird – Harper Lee</h4>
-      <p>A young girl witnesses racial injustice in the Deep South as her father defends an innocent man.</p>
-      <button class="buy">Buy</button>
-      <button class = "rent">Rent</button>
-    </div>
-    <div class="book">
-      <img src="images/thebookthief.png" alt="Fiction book cover placeholder 3">
-      <h4>Harry Potter and the Sorcerer’s Stone – J.K. Rowling</h4>
-      <p>A boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
-      <button class="buy">Buy</button>
-      <button class = "rent">Rent</button>
-    </div>
-    <div class="book">
-      <img src="images/thekiterunner.png" alt="Fiction book cover placeholder 4">
-      <h4>The Kite Runner – Khaled Hosseini</h4>
-      <p>A man returns to Afghanistan to make amends for childhood betrayal and loss.</p>
-      <button class="buy">Buy</button>
-      <button class = "rent">Rent</button>
-    </div>
-  </section>
- 
+        <div class="book">
+            <img src="images/harry potter.png" alt="Fiction book cover placeholder 1">
+            <h4>Harry Potter and the Sorcerer’s Stone – J.K. Rowling 1</h4>
+            <p>A boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
+            <button class="buy">Buy</button>
+            <button class="rent">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/mockingbird.png" alt="Fiction book cover placeholder 2">
+            <h4>To Kill a Mockingbird – Harper Lee</h4>
+            <p>A young girl witnesses racial injustice in the Deep South as her father defends an innocent man.</p>
+            <button class="buy">Buy</button>
+            <button class="rent">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/thebookthief.png" alt="Fiction book cover placeholder 3">
+            <h4>Harry Potter and the Sorcerer’s Stone – J.K. Rowling</h4>
+            <p>A boy discovers he’s a wizard and enters a magical world full of mystery and danger.</p>
+            <button class="buy">Buy</button>
+            <button class="rent">Rent</button>
+        </div>
+
+        <div class="book">
+            <img src="images/thekiterunner.png" alt="Fiction book cover placeholder 4">
+            <h4>The Kite Runner – Khaled Hosseini</h4>
+            <p>A man returns to Afghanistan to make amends for childhood betrayal and loss.</p>
+            <button class="buy">Buy</button>
+            <button class="rent">Rent</button>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 Book Haven. All rights reserved.</p>
     </footer>   
-    
 </body>
 </html>

@@ -17,7 +17,7 @@
             height:70%;
             margin-right:5%;
             margin-left:5%;
-            border-radius: 0.2rem;
+            border-radius: 8px;
             
          }
         .section_1 p{
@@ -33,7 +33,7 @@
             margin-top: 10%;
             width:40%;
             height:70%;
-            border-radius: 0.2rem;
+            
             
 
          }
@@ -54,15 +54,19 @@
             <ul>
 
                 <li onclick="goToPage(1)">Home</li>
-                <li onclick="goToPage(2)">Geres</li>
+                <li id="genres" onclick="goToPage(2)">
+                    Genres
+                    <ul class="genra_dropdown">
+                        <li>Fiction</li>
+                        <li>Action</li>
+                        <li>History</li>
+                    </ul>
+                </li>
                 <li onclick="goToPage(3)">My Cart</li>
                 <li onclick="goToPage(4)">About</li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search for a book...">
-            <button onclick="searchBooks()">Search</button>
-        </div>
+       
     </header>
     <section class = "section_1">
         <h2>Rent and buy Your Favorite Books Easily</h2>
