@@ -220,4 +220,11 @@
 }
 
 /*##########################################*/
-    
+footer{
+width:100%;
+position:relative;
+bottom:0px;
+height:8%;
+margin-top: 10px;
+
+}

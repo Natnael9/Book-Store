@@ -5,27 +5,84 @@
     <title>Book Purchase</title>
     <link rel="stylesheet" href="all.css">
     <style>
+        body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
         .container {
-            text-align: center;
-            padding: 30px;
-        }
-        img {
-            width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        h2, p {
-            color: #333;
-        }
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    height:50%;
+    margin-top: 8%;
+}
+ .container div{
+    background-color:rgba(0, 0, 0, 0.6);
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+    width:500px;
+    height: 500px;
+    color:white;
+    border-radius: 8px ;
+ }
+ 
+
+ .container div img {
+    height: 400px;
+    width: 300px;
+ }
+ #book-price{
+    font-size: 25px;
+ }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <ul>
+                <li onclick="goToHome_Page()">Home</li>
+                <li id="genres">
+                    Genres
+                    <ul class="genra_dropdown">
+                        <li onclick="goToPage(1)">Fiction</li>
+                        <li onclick="goToPage(2)">History</li>
+                        <li onclick="goToPage(3)">Action</li>
+                        <li onclick="goToPage(4)">Comics</li>
+                        <li onclick="goToPage(5)">Self Help</li>
+                    </ul>
+                </li>
+                <li>My Cart</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter book title..." />
+            <button>Search</button>
+        </div>
+    </header>
+
     <div class="container">
-        <h2 id="book-title">Loading...</h2>
+        <div><h2 id="book-title">Loading...</h2>
         <img id="book-image" src="" alt="Book Image">
+        </div>
+        <div>
         <p id="book-price">Price: $0.00</p>
-        <button onclick="window.history.back()">Go Back</button>
+        <button class="buy">add to Cart</button>
+        <button class="rent" onclick="window.history.back()">Go Back</button>
+        </div>
+        
     </div>
+    <footer>
+        <p>&copy; 2025 Book Haven. All rights reserved.</p>
+    </footer>
 
     <script>
         const title = localStorage.getItem("bookTitle");
