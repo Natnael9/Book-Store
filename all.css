@@ -134,9 +134,11 @@
            background-color:rgba(0, 0, 0, 0.6);
            color: white;
            height: 10%;
+           width:100%;
            align-content: center;
            text-align: center;
            margin-top: 2%;
+           bottom: 0;
            
          }
          
@@ -219,12 +221,5 @@
   white-space: nowrap;
 }
 
-/*##########################################*/
-footer{
-width:100%;
-position:relative;
-bottom:0px;
-height:8%;
-margin-top: 10px;
 
-}
+/*##########################################*/
