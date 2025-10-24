@@ -18,7 +18,7 @@
     max-width: 1000px;
     margin: auto;
     height:50%;
-    margin-top: 8%;
+    margin-top: 2%;
 }
  .container div{
     background-color:rgba(0, 0, 0, 0.6);
@@ -41,32 +41,14 @@
  #book-price{
     font-size: 25px;
  }
+footer{
+    height:50px;
+}
     </style>
 </head>
 <body>
     <header>
         <h1>Book Haven</h1>
-        <nav>
-            <ul>
-                <li onclick="goToHome_Page()">Home</li>
-                <li id="genres">
-                    Genres
-                    <ul class="genra_dropdown">
-                        <li onclick="goToPage(1)">Fiction</li>
-                        <li onclick="goToPage(2)">History</li>
-                        <li onclick="goToPage(3)">Action</li>
-                        <li onclick="goToPage(4)">Comics</li>
-                        <li onclick="goToPage(5)">Self Help</li>
-                    </ul>
-                </li>
-                <li>My Cart</li>
-                <li>About</li>
-            </ul>
-        </nav>
-        <div class="search-box">
-            <input type="text" placeholder="Enter book title..." />
-            <button>Search</button>
-        </div>
     </header>
 
     <div class="container">
@@ -92,7 +74,7 @@
 
         document.getElementById("book-title").textContent = title;
         document.getElementById("book-image").src = image;
-        document.getElementById("book-price").textContent = (mode === "buy" ? "Buy" : "Rent") + " Price: $" + price;
+        document.getElementById("book-price").textContent = (mode === "buy" ? "Buy" : "Rent") + " Price: " + price + " ETB" ;
     </script>
 </body>
 </html>

@@ -22,8 +22,8 @@
                         <li onclick="goToPage(5)">Self Help</li>
                     </ul>
                 </li>
-                <li>My Cart</li>
-                <li>About</li>
+                <li onclick="goTo_mycart()">My Cart</li>
+                <li onclick="goToabout()">About</li>
             </ul>
         </nav>
         <div class="search-box">
@@ -95,6 +95,12 @@
             localStorage.setItem("mode", "rent");
             window.location.href = "rent.html";
         }
+        function goToabout(){
+        window.location.href = "about.html"
+    }
+     function goTo_mycart(){
+        window.location.href = "mycart.html"
+    }
     </script> 
 </body>
 </html>

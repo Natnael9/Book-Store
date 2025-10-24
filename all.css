@@ -128,17 +128,17 @@
       margin-top:5%;
       
     }
-
           footer {
             user-select: none;    
            background-color:rgba(0, 0, 0, 0.6);
            color: white;
-           height: 10%;
+           height: 8%;
            width:100%;
            align-content: center;
            text-align: center;
            margin-top: 2%;
            bottom: 0;
+           position:relative;
            
          }
          
@@ -155,7 +155,7 @@
       border-radius: 8px;
       padding: 15px;
       text-align: center;
-      background-color:rgba(94, 67, 28, 0.6);
+      background-color:rgb(102, 102, 102) ;
     }
     .book:hover {
       transform: scale(1.12);
