@@ -35,11 +35,17 @@
 </head>
 <body>
     <header>
-        
-        <h1>Book haven</h1>
+    <div class = "BarToggle1"> 
+            <img id ="SidebarOpen" src="Icons/menu.png" alt="menue">
+              <span >Book Haven</span >
+            </div>
         <nav>
+            <div class = "BarToggle2"> 
+            <span >Book Haven</span >
+                <img  id= "SidebarClose" src="Icons\x.png" alt="close">
+              
+            </div>
             <ul>
-
                 <li onclick="goToHome_Page()">Home</li>
                 <li id="genres">
                     Genres
@@ -47,7 +53,7 @@
                         <li onclick="goToPage(1)">Fiction</li>
                         <li onclick="goToPage(2)">History</li>
                         <li onclick="goToPage(3)">Action</li>
-                        <li onclick="goToPage(4)">comics</li>
+                        <li onclick="goToPage(4)">Comics</li>
                         <li onclick="goToPage(5)">Self Help</li>
                     </ul>
                 </li>
@@ -55,7 +61,10 @@
                 <li onclick="goToabout()">About</li>
             </ul>
         </nav>
-       
+        <div class="search-box">
+            <input type="text" placeholder="Enter book title..." />
+            <button>Search</button>
+        </div>
     </header>
     <section class = "section_1">
         <h2>Coming soon ...</h2>       
@@ -80,4 +89,5 @@
 
  
     </script> 
+     <script src="code.js"></script>
 </html>

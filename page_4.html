@@ -8,8 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Book Haven</h1>
+       <div class = "BarToggle1"> 
+            <img id ="SidebarOpen" src="Icons/menu.png" alt="menue">
+              <span >Book Haven</span >
+            </div>
         <nav>
+            <div class = "BarToggle2"> 
+            <span >Book Haven</span >
+                <img  id= "SidebarClose" src="Icons\x.png" alt="close">
+              
+            </div>
             <ul>
                 <li onclick="goToHome_Page()">Home</li>
                 <li id="genres">
@@ -101,7 +109,8 @@
      function goTo_mycart(){
         window.location.href = "mycart.html"
     }
-    </script> 
+    </script>
+     <script src="code.js"></script> 
 </body>
 </html>
 
